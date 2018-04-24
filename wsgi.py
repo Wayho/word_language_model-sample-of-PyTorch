@@ -2,7 +2,6 @@
 
 from gevent import monkey
 monkey.patch_all()
-
 import os
 
 import leancloud
@@ -19,12 +18,12 @@ leancloud.init(APP_ID, app_key=APP_KEY, master_key=MASTER_KEY)
 # 如果需要使用 master key 权限访问 LeanCLoud 服务，请将这里设置为 True
 leancloud.use_master_key(False)
 
-print os.environ
-
 # 需要重定向到 HTTPS 可去除下一行的注释。
 # app = leancloud.HttpsRedirectMiddleware(app)
 app = engine.wrap(app)
 application = app
+
+print os.environ
 
 if __name__ == '__main__':
     # 只在本地开发环境执行的代码
