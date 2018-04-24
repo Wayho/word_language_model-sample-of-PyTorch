@@ -12,8 +12,7 @@ It provide some API, in API, it use <procstreams> library to shell the command, 
 * top:  top -b -n 1 -H
 * ps:   ps -eLf
 * cpuinfo:  cat /etc/issue && cat /proc/cpuinfo
-* shell:    shell command use procstreams.out() method.
-* shellpipe:    shell command use procstreams.pipe() method.
+* shell:    shell command use subprocess.Popen method.
 
 # Features
 
